@@ -28,30 +28,30 @@ const cardCvcInput = document.querySelector("#cvc");
 const validate = function (e) {
     e.preventDefault();
 
-    if (cardHolderInput.value && /^[a-zA-Z]+$/.test(cardHolderInput.value)) {
+    if (cardHolderInput.value) {
+        cardHolderInput.style.border = "1px solid #dfdee0";
         cardHolderNameImg.textContent = cardHolderInput.value;
-        cardHolderInput.style.border = "1px solid #dfdee0;";
     } else {
         cardHolderInput.style.border = "1px solid #ff5050";
     }
 
-    if (cardMonthInput.value) {
+    if (cardMonthInput.value.length === 2) {
         cardMonthImg.textContent = cardMonthInput.value;
-        cardMonthInput.style.border = "1px solid #dfdee0;";
+        cardMonthInput.style.border = "1px solid #dfdee0";
     } else {
         cardMonthInput.style.border = "1px solid #ff5050";
     }
 
-    if (cardYearInput.value) {
+    if (cardYearInput.value.length === 2) {
         cardYearImg.textContent = cardYearInput.value;
-        cardYearInput.style.border = "1px solid #dfdee0;";
+        cardYearInput.style.border = "1px solid #dfdee0";
     } else {
         cardYearInput.style.border = "1px solid #ff5050";
     }
 
-    if (cardCvcInput.value) {
+    if (cardCvcInput.value.length === 3) {
         cardCvcImg.textContent = cardCvcInput.value;
-        cardCvcInput.style.border = "1px solid #dfdee0;";
+        cardCvcInput.style.border = "1px solid #dfdee0";
     } else {
         cardCvcInput.style.border = "1px solid #ff5050";
     }
@@ -60,12 +60,12 @@ const validate = function (e) {
     if ((/^\d+$/.test(cardNumberInput.value) && cardNumberInput.value.length === 16)) {
         const num = cardNumberInput.value;
         cardNumberImg.textContent = `${num.slice(0,4)} ${num.slice(4,8)} ${num.slice(8,12)} ${num.slice(12,16)}`;
-        cardNumberInput.style.border = "1px solid #dfdee0;";
+        cardNumberInput.style.border = "1px solid #dfdee0";
     } else {
         cardNumberInput.style.border = "1px solid #ff5050";
     }
 
-    if (!/^[a-zA-Z]+$/.test(cardHolderInput.value)) return;
+    if (!cardHolderInput.value) return;
     // prettier-ignore
     if (!(/^\d+$/.test(cardNumberInput.value) && cardNumberInput.value.length === 16)) return;
     if (cardMonthInput.value.length !== 2) return;
