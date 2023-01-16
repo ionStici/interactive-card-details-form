@@ -117,11 +117,6 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    transition: opacity 0.15s, visibility 0.15s;
 }
 
 .form__message__img {
@@ -167,17 +162,25 @@ body {
     color: #21092f;
 }
 
+:root {
+    --opacity: 1;
+    --visibility: visible;
+    --events: all;
+}
+
 .form > * {
-    /* opacity: 0;
-    pointer-events: none;
-    visibility: hidden; */
+    opacity: var(--opacity);
+    pointer-events: var(--events);
+    visibility: var(--visibility);
+
     transition: opacity 0.1s, visibility 0.1s;
 }
 
 .form__message {
-    /* opacity: 1; */
-    /* pointer-events: revert; */
-    /* visibility: visible; */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
 }
 
 #card-holder::placeholder,
@@ -291,8 +294,8 @@ label {
 
         width: 483px;
         height: 100vh;
-        border-radius: none;
-        margin-right: 0;
+        border-radius: 0;
+        margin: 0;
     }
 
     .form__message {
