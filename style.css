@@ -106,6 +106,7 @@ body {
 /* FORM */
 
 .form {
+    position: relative;
     max-width: 429px;
     margin: 0 auto;
     padding: 0 24px;
@@ -117,6 +118,14 @@ body {
     line-height: 15px;
     letter-spacing: 2px;
     color: #21092f;
+}
+
+.form__message {
+    position: absolute;
+}
+
+.form > * {
+    position: relative;
 }
 
 #card-holder::placeholder,
@@ -144,8 +153,8 @@ input {
 }
 
 input:focus {
-    /* outline: none; */
-    /* border: 1px solid transparent; */
+    outline: none;
+    border: 1px solid #6348fe;
 }
 
 label {
@@ -186,11 +195,8 @@ label {
 #exp-date,
 #month,
 #cvc {
-    width: 100%;
     margin-top: 9px;
 }
-
-/*  */
 
 /*  */
 
@@ -205,6 +211,8 @@ label {
     cursor: pointer;
 }
 
+/* border: 1px solid #ff5050; */
+
 /*  */
 
 @media only screen and (min-width: 500px) {
@@ -212,5 +220,120 @@ label {
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
         margin-bottom: 100px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main {
+        display: flex;
+        margin: 0;
+        max-width: revert;
+        min-height: revert;
+    }
+
+    .top {
+        background-image: url(./images/bg-main-desktop.png);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        width: 483px;
+        height: 100vh;
+        border-radius: none;
+        margin-right: 0;
+    }
+
+    .card-back,
+    .card-front {
+        position: absolute;
+        width: revert;
+        height: revert;
+    }
+
+    .card-back {
+        top: 469px;
+        right: -222px;
+        box-shadow: 0 39px 60px rgba(0, 0, 0, 0.1425);
+    }
+
+    .card-front {
+        top: 187px;
+        left: revert;
+        right: -128px;
+        box-shadow: 0 39px 60px rgba(0, 0, 0, 0.1425);
+    }
+
+    .card-logo {
+        width: revert;
+        position: absolute;
+        top: 215px;
+        left: 196px;
+    }
+
+    .three-zeros {
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 2px;
+
+        position: absolute;
+        right: revert;
+        top: 580px;
+        left: 616px;
+    }
+
+    .zeros {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 3.42222px;
+        white-space: nowrap;
+
+        position: absolute;
+        top: 326px;
+        left: 196px;
+        bottom: revert;
+    }
+
+    .card-holder-text {
+        width: 383.2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 2px;
+
+        position: absolute;
+        top: 387.5px;
+        left: 196px;
+        bottom: revert;
+    }
+
+    /*  */
+
+    .form {
+        max-width: 381px;
+        margin: 275px 0 0 300px;
+        padding: 0;
+
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 2px;
+        color: #21092f;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .form {
+        margin-left: 349px;
+    }
+
+    #card-holder,
+    #card-number {
+        margin-bottom: 26px;
+    }
+
+    .form > div {
+        margin-bottom: 40px;
     }
 }
