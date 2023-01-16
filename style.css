@@ -25,6 +25,7 @@ body {
     max-width: 500px;
     min-height: 704px;
     margin: 0 auto;
+    position: relative;
 }
 
 /* HEADER */
@@ -103,6 +104,52 @@ body {
     bottom: -22px;
 }
 
+/* FORM MESSAGE */
+
+.form__message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.15s, visibility 0.15s;
+}
+
+.form__message__img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.form__message__h2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 3.42222px;
+    color: #21092f;
+    margin-bottom: 16px;
+}
+
+.form__message__p {
+    font-size: 18px;
+    line-height: 23px;
+    color: #8f8694;
+    margin-bottom: 48px;
+    text-transform: none;
+}
+
+.form__message__btn {
+}
+
 /* FORM */
 
 .form {
@@ -120,12 +167,17 @@ body {
     color: #21092f;
 }
 
-.form__message {
-    position: absolute;
+.form > * {
+    /* opacity: 0;
+    pointer-events: none;
+    visibility: hidden; */
+    transition: opacity 0.1s, visibility 0.1s;
 }
 
-.form > * {
-    position: relative;
+.form__message {
+    /* opacity: 1; */
+    /* pointer-events: revert; */
+    /* visibility: visible; */
 }
 
 #card-holder::placeholder,
@@ -241,6 +293,10 @@ label {
         height: 100vh;
         border-radius: none;
         margin-right: 0;
+    }
+
+    .form__message {
+        padding: 0;
     }
 
     .card-back,
