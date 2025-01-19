@@ -1,36 +1,35 @@
 # Interactive card details form solution
 
-This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw).
+This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
+This challenge was crafted using vanilla HTML, CSS, and JavaScript, focusing on form validation with a responsive design that adapts to any screen size.
 
--   [Links](#links)
--   [Built with](#built-with)
--   [Author](#author)
--   [Screenshot](#screenshot)
+## View it live
 
-## Links
+| [Live Demo URL](https://ionstici.github.io/interactive-card-details-form) | [Frontend Mentor](https://www.frontendmentor.io/solutions/interactive-card-details-form-XSJcxZvsaK) |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 
--   [Solution URL](https://github.com/ionStici/interactive-card-details-form-fem)
--   [Live Site URL](https://ionstici.github.io/interactive-card-details-form-fem)
+## Features
+
+- **Form Validation:** Ensures cardholder name, card number, expiration date, and CVC are correctly formatted and filled.
+- **Input Feedback:** Provides visual feedback for form input errors, enhancing user experience.
+- **Responsive Design:** Looks and functions perfectly on desktops, tablets, and mobiles.
+- **Interactive Card Display:** As users input their card details, the card on the left updates at submit time, providing a dynamic interaction.
 
 ## Built with
 
--   Semantic HTML5 markup
--   CSS custom properties
--   Flexbox and CSS Grid
--   Mobile-first workflow
--   JavaScript and Forms
-
-## Author
-
--   [GitHub](https://github.com/ionStici)
--   [Frontend Mentor](https://www.frontendmentor.io/profile/ionStici)
--   [Twitter](https://twitter.com/ionStici_)
+- HTML5 for structuring the context
+- CSS for styling and creating a appealing layout
+- Mobile-first workflow
+- JavaScript for form validation
 
 ## Screenshot
 
 ![](./images/screenshot.png)
+
+## Acknowledgments
+
+[Frontend Mentor](http://frontendmentor.io) provides real-world web projects ideas and helps hone your frontend coding skills.
 
 <!-- ### Primary
 
